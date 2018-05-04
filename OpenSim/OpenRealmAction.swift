@@ -12,9 +12,9 @@ final class OpenRealmAction: ExtraApplicationActionable {
     
     var application: Application?
     
-    let appBundleIdentifier = "io.realm.realmbrowser"
+    let appBundleIdentifier = "io.realm.realm-studio"
     
-    let title = "Open Realm Database"
+    let title = "Open Realm Database in Realm Studio"
     
     var isAvailable: Bool {
         return appPath != nil && realmPath != nil
@@ -37,7 +37,7 @@ final class OpenRealmAction: ExtraApplicationActionable {
     
     func perform() {
         if let realmPath = realmPath {
-            NSWorkspace.shared.openFile(realmPath, withApplication: "Realm Browser")
+            NSWorkspace.shared.openFile(realmPath, withApplication: "Realm Studio")
         }
     }
     
